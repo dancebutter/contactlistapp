@@ -1,0 +1,3 @@
+npm install mongojs
+npm install express
+npm install body-parser

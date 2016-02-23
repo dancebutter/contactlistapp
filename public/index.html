@@ -1,21 +1,45 @@
-<!DOCTYPE html>
-<html ng-app="contactList">
-    <head>
-        <meta charset="utf-8">
-        <title>Contact List App</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container" data-ng-controller="contactListCtrl">
-            <h1>Contact List App</h1>
-            <input type="text" data-ng-model="test" />
-            <h2>{{test}}</h2>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
-        <script src="js/app.module.js"></script>
-        <script src="js/app.controller.js"></script>
-    </body>
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact List App</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- libs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="controllers/controller.js"></script>
+    <script src="controllers/service.js"></script>
+</head>
+<body data-ng-app="myApp">
+    <div class="container" data-ng-controller="appCtrl">
+        <h1>Contact List App</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="name" placeholder="name" data-ng-model="input.name"></td>
+                    <td><input type="text" name="email" placeholder="example@email.com" data-ng-model="input.email"></td>
+                    <td><input type="text" name="number" placeholder="(123)456-7890" data-ng-model="input.number"></td>
+                    <td><button class="btn btn-primary" data-ng-click="addContact();">Submit</button></td>
+                </tr>
+                <tr data-ng-repeat="item in contactList track by $index">
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.number}}</td>
+                    <td><button class="btn btn-danger" data-ng-click="removeContact(item._id);">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>
