@@ -1,0 +1,20 @@
+{
+    "name" : "contact_list_app",
+    "version" : "1.0.0",
+    "description" : "leave empty",
+    "main" : "app/main.js",
+    "authors" : [
+        "ken.zhangtq@gmail.com"
+    ],
+    "license" : "",
+    "ignore" : [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "devDependencies" : {
+        "jquery" : "~1.12.0",
+        "angular" : "~1.4.5",
+        "angular-ui-router" : "~0.2.18"
+    }
+}
