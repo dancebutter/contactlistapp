@@ -8,15 +8,15 @@ define(
         AppConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
         function AppConfig($stateProvider, $urlRouterProvider) {
             console.info("[INFO] app config start.");
-            // $urlRouterProvider.otherwise('/lol');
+            $urlRouterProvider.otherwise('/main');
             $stateProvider
             .state('mainPage', {
                 url : '/main',
-                templateUrl : './app/views/main.html'
+                templateUrl : './js/app/views/main.html'
             })
             .state('lol', {
                 url : '/lol',
-                templateUrl : './app/appComponents/lol/views/lol.html'
+                templateUrl : './js/app/appComponents/lol/views/lol.html'
             });
         }
         return appModule.config(AppConfig);

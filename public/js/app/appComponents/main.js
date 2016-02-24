@@ -1,0 +1,8 @@
+define(
+    [
+        './lol/main'
+    ],
+    function() {
+        
+    }
+);

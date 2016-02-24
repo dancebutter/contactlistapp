@@ -3,7 +3,8 @@
          'angular',
          './app.module',
          './app.config',
-         './app.controller'
+         './app.controller',
+         './appComponents/main'
      ],
      function(angular) {
          console.info('[INFO] main.js loaded.');
