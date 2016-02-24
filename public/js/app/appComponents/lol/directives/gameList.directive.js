@@ -50,7 +50,7 @@ define(
                     championDataService.getChampionList().then(function( data ) {
                         scope.championList = data.data;
                         scope.databaseVersion = data.version;
-                        updateGameList();
+                        // updateGameList();
                     }, function(error) {
 
                     });
