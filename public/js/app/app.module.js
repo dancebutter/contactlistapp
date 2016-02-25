@@ -6,7 +6,7 @@ define(
     function(angular) {
         console.info('[INFO] app.module loaded.');
 
-        var appModule = angular.module('app', ['ui.router', 'lol']);
+        var appModule = angular.module('app', ['ui.router', 'lol', 'miniGame']);
         return appModule;
     }
 );

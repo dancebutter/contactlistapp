@@ -17,6 +17,10 @@ define(
             .state('lol', {
                 url : '/lol',
                 templateUrl : './js/app/appComponents/lol/views/lol.html'
+            })
+            .state('miniGame', {
+                url : '/miniGame',
+                templateUrl : './js/app/appComponents/miniGame/views/miniGame.temp.html'
             });
         }
         return appModule.config(AppConfig);

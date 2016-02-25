@@ -1,8 +1,9 @@
 define(
     [
-        './lol/main'
+        './lol/main',
+        './miniGame/main'
     ],
     function() {
-        
+
     }
 );
