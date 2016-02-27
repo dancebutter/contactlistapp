@@ -7,7 +7,8 @@ require.config(
             'hammerJs' : 'thirdParty/hammerJs/hammer.min',
             'hammerTimeJs' : 'thirdParty/hammerJs/hammer-time.min',
             'engine-common' : 'thirdParty/RSamaium-CanvasEngine-82e6fdf/core/engine-common',
-            'canvasengine' : 'thirdParty/RSamaium-CanvasEngine-82e6fdf/canvasengine'
+            'canvasengine' : 'thirdParty/RSamaium-CanvasEngine-82e6fdf/canvasengine',
+            'pixi' : 'thirdParty/pixi/pixi.min'
         },
         'shim' : {
             'angular' : {
