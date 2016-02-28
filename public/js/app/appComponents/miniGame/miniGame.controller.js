@@ -9,33 +9,50 @@ define(
         function MiniGameCtrl($scope) {
             $scope.miniGame = "M&M";
             var imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/45px-Wikimedia-logo.svg.png";
+            var fighter = "js/app/appComponents/miniGame/data/fighter.png";
+            var fighterJson = "js/app/appComponents/miniGame/data/fighter.json";
 
-            var renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor : 0x555555});
+            /*var renderer = PIXI.autoDetectRenderer(800, 600);
             document.getElementById('test01').appendChild(renderer.view);
 
-            var state = new PIXI.Container();
-            var container = new PIXI.Container();
+            var stage = new PIXI.Container();
 
-            state.addChild(container);
+            PIXI.loader
+            .add(fighterJson)
+            .load(onAssetsLoaded);
 
-            for(var j = 0; j < 5; j++) {
-                for(var i = 0; i < 5; i++) {
-                    var bunny = PIXI.Sprite.fromImage(imageUrl);
-                    bunny.x = 40 * i;
-                    bunny.y = 40 * j;
-                    container.addChild(bunny);
+            var movie;
+
+            function onAssetsLoaded() {
+                var frames = [];
+                for(var i = 0; i < 30; i++) {
+                    var val = i < 10 ? '0' + i : i;
+
+                    frames.push(PIXI.Texture.fromFrame('rollSequence00' + val + '.png'));
                 }
+
+                movie = new PIXI.extras.MovieClip(frames);
+
+                movie.position.set(300);
+
+                movie.anchor.set(0.5);
+                movie.animationSpeed = 0.5;
+
+                movie.play();
+
+                stage.addChild(movie);
+
+                animate();
             }
-
-            container.x = 100;
-            container.y = 60;
-
-            animate();
 
             function animate() {
+                movie.rotation += 0.01;
+
+                renderer.render(stage);
+
                 requestAnimationFrame(animate);
-                renderer.render(state);
-            }
+            }*/
+
 
         }
         return miniGameModule.controller('miniGameCtrl', MiniGameCtrl);

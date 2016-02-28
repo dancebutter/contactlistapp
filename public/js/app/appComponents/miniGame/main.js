@@ -1,7 +1,9 @@
 define(
     [
         './miniGame.module',
-        './miniGame.controller'
+        './miniGame.config',
+        './miniGame.controller',
+        './directives/fighter.directive'
     ],
     function() {
 
