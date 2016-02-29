@@ -12,9 +12,9 @@ define(
                 url : '/fighter',
                 template : '<fighter-directive></fighter-directive>'
             })
-            .state('miniGame.other', {
-                url : '/other',
-                template : '<h1>other</h1>'
+            .state('miniGame.clickDemo', {
+                url : '/clickDemo',
+                template : '<click-demo-directive></click-demo-directive>'
             });
         }
 
