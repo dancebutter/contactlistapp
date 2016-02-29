@@ -1,10 +1,16 @@
 var express = require('express');
-var app = express();
 var mongojs = require('mongojs');
 var db = mongojs('contactlist', ['contactlist']);
 var bodyParser = require('body-parser');
+var fs = require('fs');
+var morgan = require('morgan');
+
 var PORT_NUMBER = 9000;
 
+var app = express();
+var logFile = fs.createWriteStream('./logfile.log', {flags: 'a'});
+
+app.use(morgan('combined', {stream : logFile}));
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 
