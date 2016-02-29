@@ -15,6 +15,10 @@ define(
             .state('miniGame.clickDemo', {
                 url : '/clickDemo',
                 template : '<click-demo-directive></click-demo-directive>'
+            })
+            .state('miniGame.tiling', {
+                url : '/tiling',
+                template : '<tiling-directive></tiling-directive>'
             });
         }
 

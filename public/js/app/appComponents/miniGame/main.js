@@ -4,7 +4,8 @@ define(
         './miniGame.config',
         './miniGame.controller',
         './directives/fighter.directive',
-        './directives/clickDemo.directive'
+        './directives/clickDemo.directive',
+        './directives/tiling.directive'
     ],
     function() {
 
