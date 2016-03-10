@@ -1,7 +1,8 @@
 define(
     [
         './lol/main',
-        './miniGame/main'
+        './miniGame/main',
+        './contactList/main'
     ],
     function() {
 

@@ -21,6 +21,10 @@ define(
             .state('miniGame', {
                 url : '/miniGame',
                 templateUrl : './js/app/appComponents/miniGame/views/miniGame.temp.html'
+            })
+            .state('contact', {
+                url : '/contact',
+                templateUrl : './js/app/appComponents/contactList/views/contactList.temp.html'
             });
         }
         return appModule.config(AppConfig);
